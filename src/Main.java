@@ -1,14 +1,11 @@
+import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
         Baraja baraja = new Baraja();
+        inOut io = new inOut(baraja);
 
-        baraja.shuffle();
+        io.ejecutar();
 
-/*        for (Carta carta : baraja.getCartas()) {
-            System.out.println(carta);
-        }
-*/
-        System.out.println(baraja.getSize());
     }
 }

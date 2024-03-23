@@ -12,6 +12,7 @@ public class Baraja {
             for (Valor valor : Valor.values()) {
                 cartas.add(new Carta(palos,valor));
             }
+
         }
     }
 
@@ -21,6 +22,10 @@ public class Baraja {
 
     public int getSize() {
         return cartas.size();
+    }
+
+    public Carta quitarUno() {
+        return cartas.remove(cartas.size() -1);
     }
 
     public List<Carta> getCartas() {

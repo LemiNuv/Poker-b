@@ -21,5 +21,6 @@ public class Carta {
         return "Carta " +
                 "palo = " + palos +
                 ", valor = " + valor;
+
     }
 }
