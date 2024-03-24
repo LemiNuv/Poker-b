@@ -1,2 +1,2 @@
 Poker muy básico para mi proyecto.
-No va a tener ordén xd
+No va a tener orden xd
