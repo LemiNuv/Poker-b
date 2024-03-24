@@ -18,8 +18,7 @@ public class Carta {
 
     @Override
     public String toString() {
-        return "Carta " +
-                "palo = " + palos +
+        return "palo = " + palos +
                 ", valor = " + valor;
 
     }
