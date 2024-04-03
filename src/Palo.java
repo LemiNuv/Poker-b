@@ -1,4 +1,4 @@
-public enum Palos {
+public enum Palo {
     CORAZONES,
     DIAMANTES,
     TREBOLES,

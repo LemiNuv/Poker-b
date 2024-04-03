@@ -1,14 +1,14 @@
 public class Carta {
 
-    private final Palos palos;
+    private final Palo palos;
     private final Valor valor;
 
-    public Carta(Palos palos, Valor valor) {
+    public Carta(Palo palos, Valor valor) {
         this.palos = palos;
         this.valor = valor;
     }
 
-    public Palos getPalos() {
+    public Palo getPalos() {
         return palos;
     }
 

@@ -8,11 +8,10 @@ public class Baraja {
 
     public Baraja() {
         cartas = new ArrayList<>();
-        for (Palos palos : Palos.values()) {
+        for (Palo palos : Palo.values()) {
             for (Valor valor : Valor.values()) {
                 cartas.add(new Carta(palos,valor));
             }
-
         }
     }
 
@@ -24,7 +23,7 @@ public class Baraja {
         return cartas.size();
     }
 
-    public Carta quitarUno() {
+    public Carta quitarUnaCarta() {
         return cartas.remove(cartas.size() -1);
     }
 
