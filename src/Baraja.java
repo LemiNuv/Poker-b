@@ -24,7 +24,11 @@ public class Baraja {
     }
 
     public Carta quitarUnaCarta() {
-        return cartas.remove(cartas.size() -1);
+        if (getSize() > 0) {
+            return cartas.remove(cartas.size() -1);
+        } else {
+            return null;
+        }
     }
 
     public List<Carta> getCartas() {

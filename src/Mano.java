@@ -8,6 +8,7 @@ public class Mano {
         this.cartas = new ArrayList<>();
         cartas.add(carta1);
         cartas.add(carta2);
+        
     }
 
     public void agregarCarta(Carta carta) {
@@ -16,6 +17,22 @@ public class Mano {
 
     public ArrayList<Carta> getCartas() {
         return cartas;
+    }
+
+    public Carta cartaUno() {
+        if (!cartas.isEmpty()) {
+            return cartas.get(0);
+        } else {
+            return null;
+        }
+    }
+
+    public Carta cartaDos() {
+        if (!cartas.isEmpty()) {
+            return cartas.get(1);
+        } else {
+            return null;
+        }
     }
 
     @Override

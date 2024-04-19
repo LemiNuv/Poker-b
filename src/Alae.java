@@ -12,10 +12,24 @@ public class Alae {
         this.mano = mano;
     }
 
+    public Carta primeraCarta() {
+        if (mano != null) {
+            return mano.cartaUno();
+        } else {
+            return null;
+        }
+    }
+
+    public Carta segundaCarta() {
+        if (mano != null) {
+            return mano.cartaDos();
+        } else {
+            return null;
+        }
+    }
+
     public Mano getMano() {
         return mano;
     }
-
-    
 
 }

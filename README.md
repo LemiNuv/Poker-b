@@ -1,2 +1,3 @@
 Poker muy básico para mi proyecto.
-No va a tener orden xd
+Creo y ni lo acabaré a tiempo.
+![Koki!](https://i.ytimg.com/vi/_zkSVHjDhz4/maxresdefault.jpg)
