@@ -5,12 +5,13 @@ import java.util.List;
 public class Baraja {
 
     private List<Carta> cartas;
+    
 
     public Baraja() {
         cartas = new ArrayList<>();
-        for (Palo palos : Palo.values()) {
+        for (Palo palo : Palo.values()) {
             for (Valor valor : Valor.values()) {
-                cartas.add(new Carta(palos,valor));
+                cartas.add(new Carta(palo,valor));
             }
         }
     }
@@ -34,7 +35,5 @@ public class Baraja {
     public List<Carta> getCartas() {
         return cartas;
     }
-
-
 
 }

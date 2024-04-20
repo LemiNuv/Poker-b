@@ -15,8 +15,9 @@ public class inOut {
         String nom = in.nextLine();
     }
 
-/*    public void ejecutar() {
+    public void ejecutar() {
         while (true) {
+            System.out.println();
             System.out.println("1. mostrar baraja");
             System.out.println("2. ver cantidad de cartas");
             System.out.println("3. quitar un carta");
@@ -45,7 +46,7 @@ public class inOut {
                 System.out.println(baraja.getSize());
                 break;
             case 3:
-                baraja.quitarUno();
+                baraja.quitarUnaCarta();
                 System.out.println("se quitó una carta de la baraja");
                 break;
             case 4:
@@ -59,5 +60,5 @@ public class inOut {
                 break;
         }
     }
-*/
+
 }

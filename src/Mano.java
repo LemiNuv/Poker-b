@@ -8,7 +8,15 @@ public class Mano {
         this.cartas = new ArrayList<>();
         cartas.add(carta1);
         cartas.add(carta2);
-        
+    }
+
+    public Mano(Carta carta1, Carta carta2, Carta carta3, Carta carta4, Carta carta5) {
+        this.cartas = new ArrayList<>();
+        cartas.add(carta1);
+        cartas.add(carta2);
+        cartas.add(carta3);
+        cartas.add(carta4);
+        cartas.add(carta5);
     }
 
     public void agregarCarta(Carta carta) {
@@ -35,8 +43,37 @@ public class Mano {
         }
     }
 
+    //------------- Para el Dealer -------------//
+
+    public Carta cartaTres() {
+        if (!cartas.isEmpty()) {
+            return cartas.get(2);
+        } else {
+            return  null;
+        }
+    }
+
+    public Carta cartaCuatro() {
+        if (!cartas.isEmpty()) {
+            return cartas.get(3);
+        } else {
+            return  null;
+        }
+    }
+
+    public Carta cartaCinco() {
+        if (!cartas.isEmpty()) {
+            return cartas.get(4);
+        } else {
+            return  null;
+        }
+    }
+
+    //------------------------------------------//
+
+
     @Override
     public String toString() {
-        return "Mano" + cartas ;
+        return "Mano " + cartas ;
     }
 }

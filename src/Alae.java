@@ -1,3 +1,4 @@
+import java.util.Random;
 //Bot
 public class Alae {
 

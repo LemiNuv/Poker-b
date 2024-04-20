@@ -10,7 +10,7 @@ public class Carta {
         this.valor = valor;
     }
 
-    public Palo getPalos() {
+    public Palo getPalo() {
         return palos;
     }
 
@@ -20,8 +20,8 @@ public class Carta {
 
     @Override
     public String toString() {
-        return "palo = " + palos +
-                ", valor = " + valor;
+        return "Palo = " + palos +
+                " - Valor = " + valor;
 
     }
 }
