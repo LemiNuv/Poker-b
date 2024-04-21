@@ -45,13 +45,10 @@ public class Main {
             System.out.println("Funciono :0 increiblemente");
         }*/
 
-        while (true) {
-            
+        while (true) {   
             Scanner in = new Scanner(System.in);
             Alae alae = new Alae(1000);
-            Jugador jugador = new Jugador(1000);
-            
-            System.out.println("PreFlop");
+            Jugador jugador = new Jugador(1000);   
 
             /*try {
                 Thread.sleep(1000);
@@ -59,52 +56,39 @@ public class Main {
                 System.out.println("...");
             }*/
 
-            System.out.println("Inicia la ronda de apuestas.");
-            //ALAE
-            if (dealer.turnoCiega() == 0) { //0 Será el jugador
-                System.out.println("Alae ha apostado: ");
-                alae.setCiega(true);
-                int apuestaAlae = alae.apuestaInicial();
-                System.out.println(apuestaAlae);
-                break;
-            //JUGADOR    
-            } else { //1 Será Alae
-                //Preplof
-                System.out.println("Pon tu apuesta: ");
-                int apuestaJug = in.nextInt();
-                jugador.apuesta(apuestaJug);
-                int apuestaAlae = alae.redoblarCiega(apuestaJug);
-                System.out.println("Alae redobla la ciega pequeña:\n" + apuestaAlae);
-                //Repartir Mano
-                System.out.println("Se te entregan dos cartas:");
-                jugador.recibirMano(dealer.repartirMano());
-                System.out.println(jugador.getMano());
-                alae.recibirMano(dealer.repartirMano());
-                //Igualar o Subir cartas
-                System.out.println("Tu turno, ¿que quieres hacer? (Tienes que igualar la apuesta o no podrás ver el bote)");
-                System.out.println(jugador.getMano());
-                System.out.println("- Apuesta de Alae --> " + apuestaAlae);
-                System.out.println("- Tus fichas --> " + jugador.getFichas());
-                System.out.println("- Tus Apuesta anterior --> " + apuestaJug);
-                io.opciones();
-                int opcionJug = in.nextInt();
-                apuestaJug = jugador.opciones(opcionJug, apuestaAlae, apuestaJug);
-                if (apuestaJug >= apuestaAlae) {
-                    System.out.println("Verás el bote.");
-                    System.out.println("Comienza el Flop...");
-                    dealer.setBote(apuestaJug + apuestaAlae);
-                } else {
-                    System.out.println("No has igualado o subido tu apuesta. No podrás ver el bote.");
-                }
-                //Flop
-                System.out.println("Se reparten la cartas comunitarias");
+            System.out.println("Comienza el Preflop...");
+            System.out.println(" - Como solo jugarás contra Alae, el bote tendrá dinero por parte del Dealer.");
+            System.out.println(" - Será un pequeña variante del Poker Texas Hold'em");
+            System.out.println(" > ¡El bote tiene 350 fichas! < ");
+            alae.recibirMano(dealer.repartirMano()); //Mano Alae
+            jugador.recibirMano(dealer.repartirMano()); //Mano jugador
+            System.out.println("Recibes dos cartas: ");
+            System.out.println(jugador.getMano());
+
+            if (dealer.turnoCiega() == 1) {
+                //JUGADOR
+                System.out.println("Apuestas primero.");
+                int apuestaJugador = jugador.apuesta();
+                alae.desicion(apuestaJugador);
+                
+                int apuestaAlae = alae.getFichasApostadas();
+                System.out.println("Apuestas hechas, todas se van al bote.");
+                dealer.setBote(dealer.getBote() + apuestaJugador + apuestaAlae);
+                System.out.println(" > ¡El bote tiene " + dealer.getBote() + " fichas! < ");
+
+                System.out.println("Se reparte el Flop...");
                 dealer.recibirMano(dealer.manoDealer());
-                System.out.println(" - " + dealer.primeraCarta() + " - ");
-                System.out.println(" - " + dealer.segundaCarta() + " - ");
-                System.out.println(" - " + dealer.terceraCarta() + " - ");
-                System.out.println("Comienza una nueva ronda de apuestas");                
-                break;
+                System.out.println(" • " + dealer.primeraCarta());
+                System.out.println(" • " + dealer.segundaCarta());
+                System.out.println(" • " + dealer.terceraCarta());
+                
+                System.out.println("");
+
+            } else {
+                //ALAE
             }
+
+            break;
         }
 
     }

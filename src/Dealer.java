@@ -2,7 +2,7 @@ import java.util.Random;
 
 public class Dealer {
     private Baraja baraja;
-    private int Bote = 0;
+    private int Bote = 350;
     private Mano manoc;
 
     public Dealer(Baraja baraja) {
