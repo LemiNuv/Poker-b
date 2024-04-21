@@ -2,6 +2,7 @@ import java.util.Random;
 
 public class Dealer {
     private Baraja baraja;
+    private int Bote = 0;
     private Mano manoc;
 
     public Dealer(Baraja baraja) {
@@ -13,6 +14,7 @@ public class Dealer {
     }
 
     public Mano repartirMano() {
+        baraja.shuffle();
         Carta carta1 = baraja.quitarUnaCarta();
         Carta carta2 = baraja.quitarUnaCarta();
         return new Mano(carta1, carta2);
@@ -82,8 +84,18 @@ public class Dealer {
         baraja.shuffle();
     }
 
+    //Getters y Setters
     public Mano getMano() {
         return manoc;
     }
+
+    public int getBote() {
+        return Bote;
+    }
+
+    public void setBote(int bote) {
+        Bote = bote;
+    }
+
 
 }

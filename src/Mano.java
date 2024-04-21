@@ -74,6 +74,6 @@ public class Mano {
 
     @Override
     public String toString() {
-        return "Mano " + cartas ;
+        return "Tus cartas " + cartas ;
     }
 }

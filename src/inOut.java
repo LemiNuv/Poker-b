@@ -31,6 +31,7 @@ public class inOut {
             }
         }
       }
+
     private void opCase(int opcion) {
         switch (opcion) {
             case 1:
@@ -59,6 +60,14 @@ public class inOut {
                 System.out.println("lee bien porfa :D");
                 break;
         }
+    }
+
+    //---------------------------------------------------------------------------------------// 
+
+    public void opciones() {
+        System.out.println("1. Igualar la apuesta.");
+        System.out.println("2. Subir la apuesta.");
+        System.out.println("3. Retirarte.");
     }
 
 }
