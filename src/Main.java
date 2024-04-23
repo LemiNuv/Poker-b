@@ -50,11 +50,11 @@ public class Main {
             Alae alae = new Alae(1000);
             Jugador jugador = new Jugador(1000);
             
-            /*try {
+            try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
                 System.out.println("...");
-            }*/
+            }
 
             System.out.println("Comienza el Preflop...");
             System.out.println(" - Como solo jugarás contra Alae, el bote tendrá dinero por parte del Dealer.");
