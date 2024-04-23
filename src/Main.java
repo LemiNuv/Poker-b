@@ -48,8 +48,8 @@ public class Main {
         while (true) {   
             Scanner in = new Scanner(System.in);
             Alae alae = new Alae(1000);
-            Jugador jugador = new Jugador(1000);   
-
+            Jugador jugador = new Jugador(1000);
+            
             /*try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {

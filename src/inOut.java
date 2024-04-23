@@ -1,6 +1,7 @@
 import java.util.Scanner;
 public class inOut {
 
+
     Scanner in;
     Baraja baraja;
     Mano mano;

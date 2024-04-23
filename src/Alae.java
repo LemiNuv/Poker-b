@@ -2,6 +2,7 @@ import java.util.Random;
 //🍷🐛 Bot
 public class Alae {
 
+    private boolean pasar = false;
     private boolean ciega = false;
     private boolean igualar = false;
     private int fichas;
@@ -69,6 +70,14 @@ public class Alae {
         this.fichasApostadas = fichasApostadas;
     }
 
+    public boolean isPasar() {
+        return pasar;
+    }
+
+    public void setPasar(boolean pasar) {
+        this.pasar = pasar;
+    }
+
     //Cerebro del Bot
     public int apuestaInicial() {
         if (ciega) {
@@ -126,11 +135,10 @@ public class Alae {
         int max = 500;
         int desicion = randi.nextInt(max - min +1) + min;
         
-        if (desicion <= 165) { //subir
+        if (desicion <= 165) { //Subir
             subir(apuestaJugador);
         } else if (desicion >= 166) { //Igualar  
             igualar(apuestaJugador);
         }
     }
-
 }
